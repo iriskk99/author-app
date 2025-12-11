@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Environment files / secrets
+.env
+OPENAI_API_KEY.txt
+
+# Local data files (optional)
+data/*.json
+data/*.csv
+
