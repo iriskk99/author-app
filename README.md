@@ -1,24 +1,71 @@
-# Research Trends Dashboard (OpenAlex + Streamlit + LLM)
+# Research Trends Interactive Dashboard (OpenAlex + Streamlit + LLM)
 
-This project is a small Python-based interactive toolbox that:
+Author: Ke Wang
 
-- Loads a researcher's publication data from the **OpenAlex API**
-- Cleans and summarizes the data using **pandas**
-- Produces **interactive visualizations** in Streamlit:
-  - Publications per year
-  - Citations per year
-  - First-author publications over time
-  - Top venues
-  - Top concepts / topics
-- Integrates a **lightweight LLM layer**:
-  - Trend summarization
-  - A mini RAG-based Q&A chatbot over the publication corpus
+## Overview
+This project is an interactive research-trends visualization toolbox built for evaluating Python tool development, data processing, and visualization skills. It ingests the publication record of Prof. Xinyue Ye from OpenAlex, processes the metadata, and presents:
 
-It is configured by default for **Prof. Xinyue Ye** (Department of Geography and the Environment, Alabama Center for the Advancement of AI, The University of Alabama) but can be reused for any author in OpenAlex.
+- Publication trends over time
 
-## 1. Installation
+- Citation patterns
 
-Create and activate a virtual environment (optional but recommended), then:
+- First-author statistics
 
-```bash
-pip install -r requirements.txt
+- Venue distributions
+
+- Concept/topic distributions
+
+- Filters for year and publication type
+
+- LLM-powered trend summary
+
+- RAG question-answering over the professor’s work
+
+
+## 1. Features
+
+## Data Ingestion
+
+- Automatically queries OpenAlex API for author ID + works
+
+- Caches raw and processed data locally
+
+- Robust to missing fields and multiple institutions
+
+## Data Processing
+
+- Cleaning and normalization of publication metadata
+
+- Derivation of:
+
+- publication year
+
+- first-author boolean
+
+- venue
+
+- citation counts
+
+- concept frequencies
+
+## Interactive Visualizations (Altair + Streamlit)
+
+- Publications per year
+
+- Citations per year
+
+- First-author publications per year
+
+- Top venues
+
+- Top concepts
+
+## LLM Features 
+
+- Generate a natural-language summary of research trends
+
+- RAG-based Q&A grounded in selected publications
+
+- Uses SentenceTransformers + retrieval + OpenAI API
+
+
