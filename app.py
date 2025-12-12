@@ -49,7 +49,7 @@ def load_author_and_df(
         institution_hint=institution_hint or None,
         data_dir=data_dir,
         mailto=mailto,
-        refresh=False,
+        refresh=True,
     )
     author_id = author["id"]
 
